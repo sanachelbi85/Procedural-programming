@@ -1,0 +1,39 @@
+FUNCTION dot_product(V1,V2) : INTEGER
+VAR
+     ps:INTEGER:=0;
+     i:INTEGER:=0;
+BEGIN
+   FOR i FROM  0 TO V1.length-1 STEP 1 DO
+ ps:= ps+V1[i]*V2[i];
+ END_FOR
+    RETURN ps ;
+END
+
+ALGORITHM Vector
+ VAR
+ V1:ARRAY_OF INTEGER[10];
+V2:ARRAY_OF INTEGER[10];
+ k:INTEGER:=0;
+ i:INTEGER:=0;
+ j:INTEGER:=0;
+ n:INTEGER;
+ P:INTEGER:=0;
+
+ READ(n)
+FOR K FROM 0 TO n-1 STEP step DO
+ FOR i FROM 0 TO 10 STEP 1 DO
+
+READ (V1[i])
+END_FOR
+FOR j FROM 0 TO 10 STEP 1 DO
+READ (V2[i])
+END_FOR
+
+P:=dot_product(V1,V2)
+IF(P=0) THEN WRITE ('the two vectors are orthogonal')
+ELSE WRITE('the two vectors are not orthogonal'
+)
+END_IF
+
+END_FOR
+END
